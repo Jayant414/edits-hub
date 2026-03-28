@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FabFest Editz Hub</title>
+</head>
+<body style="font-family: 'Segoe UI', sans-serif; margin: 0; background-color: white; text-align: center;">
+
+    <div id="hub-page" style="display: block; padding-top: 150px;">
+        <h1 style="font-size: 72px; font-weight: 700; color: #1a1a1a; letter-spacing: -2px;">
+            FabFest <span style="background: linear-gradient(to right, #7b99ff, #91ff91); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Edits Hub</span>
+        </h1>
+        
+        <button onclick="showRequestForm()" style="background-color: black; color: white; padding: 15px 35px; font-size: 18px; font-weight: 600; border-radius: 30px; border: none; cursor: pointer; margin-top: 20px;">
+            Request For Your Edits
+        </button>
+    </div>
+
+    <div id="request-page" style="display: none; padding-top: 80px;">
+        <h2 style="font-size: 40px; margin-bottom: 20px;">Describe Your Edit 🎬</h2>
+        
+        <form action="https://formspree.io/f/mgopongy" method="POST" style="display: inline-block; text-align: left; background: #f9f9f9; padding: 30px; border-radius: 20px; border: 1px solid #ddd; width: 350px;">
+            
+            <label><b>What should I edit?</b></label><br>
+            <textarea name="message" placeholder="Example: Messi goals with phonk music" style="width: 100%; height: 80px; margin-top: 10px; border-radius: 10px; padding: 10px; border: 1px solid #ccc;" required></textarea>
+            <br><br>
+
+            <label><b>Your Discord ID:</b></label><br>
+            <input type="text" name="discord" placeholder="FabFest#1234" style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 10px; border: 1px solid #ccc;">
+            <br><br>
+
+            <label><b>Your Email:</b></label><br>
+            <input type="email" name="email" placeholder="you@gmail.com" style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 10px; border: 1px solid #ccc;" required>
+            <br><br>
+
+            <button type="submit" style="background-color: black; color: white; width: 100%; padding: 15px; border-radius: 15px; border: none; font-weight: bold; cursor: pointer;">
+                Send Request to FabFest
+            </button>
+
+            <p onclick="showHub()" style="color: blue; cursor: pointer; text-align: center; margin-top: 20px; font-size: 14px;">← Go Back</p>
+        </form>
+    </div>
+
+    <script>
+        function showRequestForm() {
+            // This hides the Hub and shows the Request box
+            document.getElementById('hub-page').style.display = 'none';
+            document.getElementById('request-page').style.display = 'block';
+        }
+
+        function showHub() {
+            // This does the opposite to go back
+            document.getElementById('hub-page').style.display = 'block';
+            document.getElementById('request-page').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
